@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Phone Directory</title>
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="./bower_components/angular/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/module.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/factory/factory.js"></script>
+    <script src="js/controller/controller.js"></script>
+</head>
+<body>
+    <div class="container" ng-app="appmodule" ng-controller="appCtrl">
+        <br>
+        <h1 class="alert-success">Enter Credentials Here</h1>
+        <br>
+        <input type="text" class="form-control" placeholder="Enter ID Here" ng-model="userDetails.userid">
+        <br>
+        <input type="password" class="form-control" placeholder="Enter Password Here" ng-model="userDetails.password">
+        <br>
+        <h2 class="alert-danger">{{data.data.message}}</h2>
+        <br>
+        <button class="btn btn-primary mr-2" ng-click="doLogin()">Login</button>
+        <button class="btn btn-success" ng-click="doSignup()">SignUp</button>
+
+    </div>
+</body>
+</html>
